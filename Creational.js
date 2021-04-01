@@ -1,11 +1,15 @@
-const EmplyeeBuilder = require('./helpers/EmplyeeBuilder')
+const Fabric = require('./helpers/Fabric')
 
-const emplyee1 = new EmplyeeBuilder('Vasil', 2000, 'Developer').build();
-console.log(emplyee1)
+const fabric = new Fabric();
 
-const builder = new EmplyeeBuilder();
-builder.updateEmployerName('Team Lead');
-const emplyee2 = builder.updateMoney(5000).build();
-console.log(emplyee2)
+const Alex = fabric.createPerson('shopper', 'Alex');
+const Alex2 = fabric.createPerson('shopper', 'Alex2', 20000);
 
-console.log(emplyee1 === emplyee2)
+console.log(Alex);
+console.log(Alex2);
+
+const Eve = fabric.createPerson('employee', 'Eve');
+const Eve2 = fabric.createPerson('employee', 'Eve2');
+
+console.log(Eve)
+console.log(Eve2)
